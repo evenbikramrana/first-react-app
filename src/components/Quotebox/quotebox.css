@@ -3,6 +3,9 @@
     padding: 1rem;
     box-shadow: 2px 3px;
 }
+.overflow-hidden {
+    overflow: hidden;
+}
 .quote-box__header {
     text-align: center;
     padding-bottom: 1rem;
