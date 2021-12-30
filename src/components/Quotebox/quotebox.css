@@ -1,0 +1,54 @@
+.quote-box {
+    border: 1px solid;
+    padding: 1rem;
+    box-shadow: 2px 3px;
+}
+.quote-box__header {
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid black;
+    /* color: #4caf50; */
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+.quote-box__content {
+    height: 250px;
+    overflow-y: scroll;
+    padding: 1rem 0;
+    margin: 0.5rem auto;
+}
+.quote-box__content::-webkit-scrollbar {
+    width: 0.25rem;
+    border-radius: 50px;
+}
+.quote-box__content::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+}
+.quote-box__content::-webkit-scrollbar-thumb {
+    background-color: #2196f3;
+}
+
+.quote-box__quote {
+    font-size: 1.5rem;
+    /* color: #2196f3; */
+    line-height: 120%;
+    margin-bottom: 1rem;
+}
+.quote-box__quote::before {
+    content: '\201C';
+    color: black;
+    font-size: 3rem;
+}
+.quote-box__author::before {
+    content: '-';
+}
+.quote-box__footer {
+    text-align: center;
+    border-top: 1px solid;
+    padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+    .quote-box {
+        width: 60%;
+    }
+}
