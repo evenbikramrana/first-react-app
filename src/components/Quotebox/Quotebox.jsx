@@ -47,18 +47,30 @@ const Quotebox = () => {
     <div className="quote-box">
       <h3 className="quote-box__header">Generate Random Quote</h3>
       <div className="overflow-hidden">
-        <motion.div animate={controls} initial={{opacity:0,x:-300}} className="quote-box__content">
+        <div className="quote-box__content">
           {quote ? (
-            <motion.p animate={controls} className="quote-box__quote">{quote}</motion.p>
+            <motion.p
+              animate={controls}
+              initial={{ opacity: 0, x: -300 }}
+              className="quote-box__quote"
+            >
+              {quote}
+            </motion.p>
           ) : (
-            <p className="quote-box__quote">Quote will be displayed here</p>
+            <p
+              
+              className="quote-box__quote"
+            >
+              Quote will be displayed here
+            </p>
           )}
           {author ? (
-            <p className="quote-box__author">{author}</p>
+            <motion.p animate={controls}
+              initial={{ opacity: 0, x: -300 }} className="quote-box__author">{author}</motion.p>
           ) : (
             <p className="quote-box__author">Author will be displayed here</p>
           )}
-        </motion.div>
+        </div>
       </div>
 
       <div className="quote-box__footer">
