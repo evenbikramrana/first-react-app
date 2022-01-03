@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Button from "components/Button";
 import "./quotebox.css";
 import { motion, useAnimation } from "framer-motion";
@@ -7,7 +7,7 @@ const Quotebox = () => {
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
   const controls = useAnimation();
-  const handleGetQuote = () => {
+  const handleGetQuote = useCallback(() => {
     console.log("get quote");
     fetch("https://quotes15.p.rapidapi.com/quotes/random/", {
       method: "GET",
@@ -37,11 +37,12 @@ const Quotebox = () => {
       .catch((err) => {
         console.log(err);
       });
-  };
+  }, [controls]);
+
   useEffect(() => {
     handleGetQuote();
     console.log("use effect");
-  }, []);
+  }, [handleGetQuote]);
   return (
     <div className="quote-box">
       <h3 className="quote-box__header">Generate Random Quote</h3>
