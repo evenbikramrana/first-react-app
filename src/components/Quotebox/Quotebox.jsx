@@ -15,7 +15,7 @@ const Quotebox = () => {
       method: "GET",
       headers: {
         "x-rapidapi-host": "quotes15.p.rapidapi.com",
-        "x-rapidapi-key": process.env.REACT_APP_RAPIDAPI_KEY,
+        "x-rapidapi-key": "1ab2a061c6msh28bab6680d0f6dbp1df1b9jsndb2f73fb9922",
       },
     })
       .then((response) => response.json())
